@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App1.ViewModels.Examen"
+             xmlns:viewModels="clr-namespace:App1.ViewModels;assembly=App1"
+             x:Class="App1.Views.Examen.SelectProfession">
+
+    <ContentPage.Content>
+        <RefreshView x:DataType="local:SelectProfessionViewModel"
+                     Command="{Binding LoadItemsCommand}"
+                     IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+            <Grid BackgroundColor="Transparent">
+                <Grid.Resources>
+                    <ResourceDictionary>
+                        <Color x:Key="temp">#A0FFA500</Color>
+
+                        <Style TargetType="ImageButton">
+                            <Setter Property="BackgroundColor"
+                                    Value="#A0FFA500" />
+                                
+                        </Style>
+
+                        <Style TargetType="Grid">
+                            <Setter Property="BackgroundColor"
+                                    Value="#50FFA500" />
+                        </Style>
+
+                        
+                        <Style TargetType="Label">
+                            <Setter Property="FontSize"
+                                    Value="Large" />
+                            <Setter Property="HorizontalOptions"
+                                    Value="CenterAndExpand" />
+                            <Setter Property="VerticalOptions"
+                                    Value="CenterAndExpand" />
+                        </Style>
+
+                    </ResourceDictionary>
+                </Grid.Resources>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid Grid.Column="0"
+                      Grid.Row="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="85*"
+                                       x:Name="row" />
+                        <RowDefinition Height="30" />
+                    </Grid.RowDefinitions>
+                    <ImageButton Source="helmet" Clicked="helmetClick"
+                                 Grid.Row="0" />
+                    <Label Text="Слесарь ПС"
+                           Grid.Row="1" />
+                </Grid>
+                <Grid Grid.Column="1"
+                      Grid.Row="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="85*" />
+                        <RowDefinition Height="30" />
+                    </Grid.RowDefinitions>
+                    <ImageButton Source="craneDriver" Clicked="craneClick"
+                                 Grid.Row="0" />
+                    <Label Text="Машинист крана"
+                           Grid.Row="1" />
+                </Grid>
+                <Grid Grid.Column="0"
+                      Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="85*" />
+                        <RowDefinition Height="30" />
+                    </Grid.RowDefinitions>
+                    <ImageButton Source="electrician" Clicked="electricianClick"
+                                 Grid.Row="0" />
+                    <Label Text="Электромонтер"
+                           Grid.Row="1" />
+                </Grid>
+                <Grid Grid.Column="1"
+                      Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="85*" />
+                        <RowDefinition Height="30" />
+                    </Grid.RowDefinitions>
+                    <ImageButton Source="machine" Clicked="machineClick"
+                                 Grid.Row="0" />
+                    <Label Text="Станочник"
+                           Grid.Row="1" />
+                </Grid>
+                <Grid Grid.Column="0"
+                      Grid.Row="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="85*" />
+                        <RowDefinition Height="30" />
+                    </Grid.RowDefinitions>
+                    <ImageButton Source="welder" Clicked="welderClick"
+                                 Grid.Row="0" />
+                    <Label Text="Электросварщик" 
+                           Grid.Row="1" />
+                </Grid>
+                
+            </Grid>
+        </RefreshView>
+    </ContentPage.Content>
+</ContentPage>
