@@ -15,12 +15,12 @@ namespace App1.Services
         {
             items = new List<SoSTelephoneNumberItem>()
             {
-            new SoSTelephoneNumberItem { Id = Guid.NewGuid().ToString(), Name="", NumberLocal="Местный", NumberTown="Городской" },
-            new SoSTelephoneNumberItem { Id = Guid.NewGuid().ToString(), Name = "Пожарная команлда", NumberLocal = "5-15", NumberTown = "+7(383)-337-67-44" },
-            new SoSTelephoneNumberItem { Id = Guid.NewGuid().ToString(), Name = "Дежурный здравпункта", NumberLocal = "4-43", NumberTown = "+7(383)-337-54-43" },
-            new SoSTelephoneNumberItem { Id = Guid.NewGuid().ToString(), Name = "Начальник караула", NumberLocal = "2-37", NumberTown = "+7(383)-337-74-39" },
+            new SoSTelephoneNumberItem { Id = Guid.NewGuid().ToString(), Name = "", NumberLocal="Местный", NumberTown="Городской" },
+            new SoSTelephoneNumberItem { Id = Guid.NewGuid().ToString(), Name = "Пожарная команлда", NumberLocal = "5-15",          NumberTown = "+7(383)-337-67-44" },
+            new SoSTelephoneNumberItem { Id = Guid.NewGuid().ToString(), Name = "Дежурный здравпункта", NumberLocal = "4-43",       NumberTown = "+7(383)-337-54-43" },
+            new SoSTelephoneNumberItem { Id = Guid.NewGuid().ToString(), Name = "Начальник караула", NumberLocal = "2-37",          NumberTown = "+7(383)-337-74-39" },
             new SoSTelephoneNumberItem { Id = Guid.NewGuid().ToString(), Name = "Диспетчер ремонтной службы", NumberLocal = "3-80", NumberTown = "+7(383)-337-64-68" },
-            new SoSTelephoneNumberItem { Id = Guid.NewGuid().ToString(), Name = "Охрана труда", NumberLocal = "3-55", NumberTown = "+7(383)-337-54-60" }
+            new SoSTelephoneNumberItem { Id = Guid.NewGuid().ToString(), Name = "Охрана труда", NumberLocal = "3-55",               NumberTown = "+7(383)-337-54-60" }
             };
 
         }
@@ -52,8 +52,6 @@ namespace App1.Services
         {
             return await Task.FromResult(items.FirstOrDefault(s => s.Id == id));
         }
-
-       
 
         public Task<IEnumerable<SoSTelephoneNumberItem>> GetGroupID(EnumProf groupID)
         {

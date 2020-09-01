@@ -110,16 +110,15 @@
                       Icon="tab_about.png"
                       Route="AboutPage"
                       ContentTemplate="{DataTemplate local:AboutPage}" />
-        <ShellContent Title="Просмотр"
+        <ShellContent Title="Обучение"
                       Icon="tab_feed.png"
                       ContentTemplate="{DataTemplate Examen:SelectProfession}" />
-        <ShellContent Title="Телефоны экстренного вызова"
+        <ShellContent Title="Телефоны"
                       Icon="sos.png"
                       ContentTemplate="{DataTemplate local:SoSTelephoneNumber}" />
-        <ShellContent Title="Элементы"
-                      Icon="sos.png"
-                      ContentTemplate="{DataTemplate local:ItemsPage}" />
-
+        <ShellContent Title="Видео"
+                      Icon="iconfinder_youtube_5346048.png"
+                      ContentTemplate="{DataTemplate local:VideoPLayer}" />
     </FlyoutItem>
 
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->

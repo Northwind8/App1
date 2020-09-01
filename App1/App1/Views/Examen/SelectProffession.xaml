@@ -28,7 +28,7 @@
                         
                         <Style TargetType="Label">
                             <Setter Property="FontSize"
-                                    Value="Large" />
+                                    Value="Small" />
                             <Setter Property="HorizontalOptions"
                                     Value="CenterAndExpand" />
                             <Setter Property="VerticalOptions"

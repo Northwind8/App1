@@ -20,7 +20,7 @@ namespace App1
             //MainPage = new SelectProfession();
             //MainPage = new NavigationPage(new LoginPage());
         }
-
+       
         protected override void OnStart()
         {
         }

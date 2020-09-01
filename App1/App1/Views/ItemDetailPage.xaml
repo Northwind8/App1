@@ -5,40 +5,62 @@
              xmlns:viewmodels="clr-namespace:App1.ViewModels"
              x:Class="App1.Views.ItemDetailPage"
              Title="{Binding Title}">
-
-    <ScrollView>
-        <StackLayout Spacing="20"
-                     x:DataType="viewmodels:ItemDetailViewModel"
-                     x:Name="stackl"
-                     Padding="15">
-            <Label Text="Заголовок: "
-                   FontSize="Medium" />
-            <Label Text="{Binding Text}"
-                   FontSize="Small" />
-            <Label Text="Описание:"
-                   FontSize="Medium" />
-            <Label Text="{Binding Description}"
-                   FontSize="Small" />
-            <Label Text="Фото:"
-                   FontSize="Medium" />
-    
-            <CollectionView ItemsSource="{Binding PathImages}" RemainingItemsThreshold="2">
-                <CollectionView.ItemsLayout>
-                    <LinearItemsLayout ItemSpacing="10"
-                                       Orientation="Vertical" />
-                </CollectionView.ItemsLayout>
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <StackLayout>
-                            <Label Text="Фото"/>
-                            <Image Source="{Binding }"
-                                   Aspect="AspectFill"
-                                   WidthRequest="100"
-                                   HeightRequest="100" />
-                        </StackLayout>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-        </StackLayout>
-    </ScrollView>
+    <CollectionView ItemsSource="{Binding PathImages}">
+        <CollectionView.Header>
+            <StackLayout Spacing="20"
+                         x:DataType="viewmodels:ItemDetailViewModel"
+                         Padding="15">
+                <Label Text="Заголовок: "
+                       FontSize="Medium" />
+                <Label Text="{Binding Text}"
+                       FontSize="Small" />
+                <Label Text="Описание:"
+                       FontSize="Medium" />
+                <Label Text="{Binding Description}"
+                       FontSize="Small" />
+                <Label Text="Фото:"
+                       FontSize="Medium" />
+            </StackLayout>
+        </CollectionView.Header>
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Image Source="{Binding}" />
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
 </ContentPage>
+
+
+
+
+<!--<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:App1.Models;assembly=App1"
+             xmlns:viewmodels="clr-namespace:App1.ViewModels"
+             x:Class="App1.Views.ItemDetailPage"
+             Title="{Binding Title}">
+    <CollectionView ItemsSource="{Binding PathImages}">
+        <CollectionView.Header>
+            <StackLayout Spacing="20"
+                         x:DataType="viewmodels:ItemDetailViewModel"
+                         Padding="15">
+                <Label Text="Заголовок: "
+                       FontSize="Medium" />
+                <Label Text="{Binding Text}"
+                       FontSize="Small" />
+                <Label Text="Описание:"
+                       FontSize="Medium" />
+                <Label Text="{Binding Description}"
+                       FontSize="Small" />
+                <Label Text="Фото:"
+                       FontSize="Medium" />
+            </StackLayout>
+        </CollectionView.Header>
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Image Source="{Binding}" />
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>-->

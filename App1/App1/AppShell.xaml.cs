@@ -13,6 +13,7 @@ namespace App1
         {
             InitializeComponent();
             Routing.RegisterRoute(nameof(SoSTelephoneNumber), typeof(SoSTelephoneNumber));
+            Routing.RegisterRoute(nameof(VideoPLayer), typeof(VideoPLayer));
             Routing.RegisterRoute(nameof(ItemsPage), typeof(ItemsPage));
             Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
             Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));

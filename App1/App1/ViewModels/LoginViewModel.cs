@@ -12,6 +12,7 @@ namespace App1.ViewModels
 
         public LoginViewModel()
         {
+
             LoginCommand = new Command(OnLoginClicked);
         }
 

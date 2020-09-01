@@ -28,7 +28,7 @@
                          HorizontalOptions="Center"
                          VerticalOptions="Center">
                 <Image Source="NERZ.png"
-                       Margin="0,40,0,40"
+                       Margin="0,5,0,5"
                        VerticalOptions="Center"
                        HeightRequest="64" />
             </StackLayout>

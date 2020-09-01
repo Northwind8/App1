@@ -62,11 +62,10 @@ namespace App1.ViewModels
             try
             {
                 var item = await DataStore.GetItemAsync(itemId);
-                Id = item .Id;
+                Id = item.Id;
                 Text = item.Text; 
                 Description = item.Description;
-                PathImages = item.Images;
-
+                PathImages = item.Images ?? new string[0];
             }
             catch (Exception)
             {
